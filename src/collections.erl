@@ -5,19 +5,19 @@
 % de forma mais estruturada as listas
 point() ->
     Point = {10, 5}, % Declarando uma tupla com a sintaxe {...}
-    {X, Y} = Point, % Acessando os dados da tupla "Point"
+    {X, Y} = Point,  % Acessando os dados da tupla "Point"
 
     io:format("X: ~p~n", [X]),
     io:format("Y: ~p~n", [Y]).
 
 lists() ->
     Values = [1, 2, 3, 4, 5], % Inicializando uma lista
-    [Head|Tail] = Values, % Acesssando os valores de uma lista
+    [Head|Tail] = Values,     % Acesssando os valores de uma lista
 
     io:format("Head: ~p~n", [Head]),
     io:format("Tail: ~p~n", [Tail]),
 
-    NewList = [Head | [0, 9, 8]], % Concatenando listas usando o operador "constructor"
+    NewList = [Head | [0, 9, 8]],  % Concatenando listas usando o operador "constructor"
     NewListSize = length(NewList), % Obtendo o tamanho de uma lista
 
     io:format("NewList: ~p~n", [NewList]),

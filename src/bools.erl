@@ -13,9 +13,9 @@ bool_algebra() ->
 equality(First, Second) ->
     io:format("~p~n", [First =:= Second]), % Igual a
     io:format("~p~n", [First =/= Second]), % Diferente de
-    io:format("~p~n", [First == Second]), % Igual a, porém desconsiderando casas decimais
-    io:format("~p~n", [First /= Second]), % Diferente de, porém desconsiderando casas decimais
-    io:format("~p~n", [First < Second]), % Menor que
-    io:format("~p~n", [First =< Second]), % Menor ou igual a
-    io:format("~p~n", [First > Second]), % Maior que
-    io:format("~p~n", [First >= Second]). % Maior ou igual a
+    io:format("~p~n", [First == Second]),  % Igual a, porém desconsiderando casas decimais
+    io:format("~p~n", [First /= Second]),  % Diferente de, porém desconsiderando casas decimais
+    io:format("~p~n", [First < Second]),   % Menor que
+    io:format("~p~n", [First =< Second]),  % Menor ou igual a
+    io:format("~p~n", [First > Second]),   % Maior que
+    io:format("~p~n", [First >= Second]).  % Maior ou igual a

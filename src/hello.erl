@@ -12,7 +12,7 @@ hello() ->
     hello("World").
 
 % Pattern matching usando a expressão "when (boolean)". É uma das formas de controle
-% condicional, principalmente usada quando conhecemos as inputs de uma função
+% condicional, principalmente usada quando conhecemos as possíveis inputs de uma função
 %
 % A ordem de declaração das funções importa! Elas devem ser declaradas de mais específicas
 % para menos específicas
