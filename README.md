@@ -11,6 +11,8 @@ Todos os recursos (*sites*, livros, *pdfs*) que usei
 - [Erlang/OTP docs](https://www.erlang.org/doc/readme.html)
 - [Learn you some Erlang for great good!](https://learnyousomeerlang.com/content)
 - [Pattern Matching In Erlang](https://akhil.sh/tutorials/erlang/erlang/pattern_matching/)
+- [A Deeper Look at Tail Recursion in Erlang](https://prog21.dadgum.com/1.html)
+- [Which one should I use exit, error or throw?](https://stackoverflow.com/questions/13618261/which-one-should-i-use-exit-error-or-throw)
 
 ### PDFs abertos
 
