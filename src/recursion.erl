@@ -1,13 +1,14 @@
 -module(recursion).
--export([factorial/1, len/1, factorial_t/1]).
+-export([factorial/1, len/1, tail_factorial/1]).
 
 % Recursão simples, usando fatoriais
 %
 % Exemplo de stack de chamadas para factorial(3).
 % - factorial(3) -> 3 * factorial(2)
-% - factorial(2) -> 2 * factorial(1)
-% - factorial(1) -> 1 * factorial(0)
-% - factorial(0) -> 1
+%                -> 3 * (2 * factorial(1))
+%                -> 3 * (2 * 1)
+%                -> 3 * 2
+%                -> 6
 % - percorre a stack computando os resultados (1 * 1 * 2 * 3) = 6
 factorial(0) -> 1;
 factorial(N) when N > 0 -> N * factorial(N-1).
@@ -21,13 +22,11 @@ len([_|T]) -> 1 + len(T).
 % o uso de memória da "stack" de recursão retornando os valores finais ao invés
 % de depender da computação da stack
 %
-% Exemplo de stack de chamadas para factorial_t(3).
-% - factorial_t(3) -> factorial_t(3, 1) % Nesse caso temos uma chamada extra por conta do "alias"
-% - factorial_t(3, 1) -> factorial_t(2, 3)
-% - factorial_t(2, 3) -> factorial_t(1, 6)
-% - factorial_t(1, 6) -> factorial_t(0, 6)
-% - factorial_t(0, 6) -> 6
-factorial_t(N) -> factorial_t(N, 1).
-
-factorial_t(0, Acc) -> Acc; % Usando Acc como acumulador temporário
-factorial_t(N, Acc) when N > 0 -> factorial_t(N-1, N*Acc).
+% Exemplo de stack de chamadas para tail_factorial(3).
+% - tail_factorial(3) -> tail_factorial(3, 1) Chamada extra por conta da função auxiliar tail_factorial/2
+%                     -> tail_factorial(2, 3*1)
+%                     -> tail_factorial(1, 3*2)
+%                     -> 6
+tail_factorial(N) -> tail_factorial(N, 1).
+tail_factorial(1, Acc) -> Acc; % Usando Acc como acumulador temporário
+tail_factorial(N, Acc) -> tail_factorial(N-1, N*Acc).
