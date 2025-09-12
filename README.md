@@ -22,6 +22,10 @@ Todos os recursos (*sites*, livros, *pdfs*, vídeos, etc...) que usei
 
 - [Tail Recursion Explained - Computerphile](https://www.youtube.com/watch?v=_JtPhF8MshA)
 
+### Livros
+
+- [Chris Okasaki - Purely Functional Data Structures](https://books.google.ca/books?id=SxPzSTcTalAC&lpg=PP1&dq=chris%20okasaki%20purely%20functional%20data%20structures&pg=PP1#v=onepage&q&f=false)
+
 # Comandos úteis
 
 - `erlc ./*.erl`: Compila todos os arquivos `.erl` para `.beam`
